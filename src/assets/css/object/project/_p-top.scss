@@ -1,0 +1,35 @@
+@use '../../foundation/variable/color' as *;
+@use '../../foundation/variable/font' as *;
+@use '../../foundation/setting/function' as *;
+@use '../../foundation/setting/mixin' as *;
+@use 'sass:math';
+
+.p-top {
+  .p-top_area {
+    @include media(sp) {
+    }
+    @include media(pc) {
+      margin-top: pc(64);
+    }
+    .p-top_movie {
+      .p-top_movieList {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-right: auto;
+        margin-left: auto;
+        @include media(pc) {
+          width: pc(1280);
+          gap: pc(26.66);
+        }
+        .p-top_movieItem {
+          aspect-ratio: 2 / 3;
+          @include media(sp) {
+          }
+          @include media(pc) {
+            width: pc(300);
+          }
+        }
+      }
+    }
+  }
+}

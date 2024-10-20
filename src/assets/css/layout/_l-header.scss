@@ -1,0 +1,113 @@
+@use '../foundation/variable/color' as *;
+@use '../foundation/variable/font' as *;
+@use '../foundation/setting/function' as *;
+@use '../foundation/setting/mixin' as *;
+@use 'sass:math';
+
+.l-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  > .l-header_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      width: pc(1280);
+      height: pc(84);
+    }
+    > .l-header_logo {
+      @include media(sp) {
+      }
+      @include media(pc) {
+        font-size: pc(32);
+      }
+    }
+    > .l-header_nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      @include media(sp) {
+      }
+      @include media(pc) {
+        gap: pc(16);
+      }
+      > .l-header_colorMode {
+        border: 1px solid $gray_02;
+        border-radius: calc(infinity * 1px);
+        background-color: $white_01;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include media(sp) {
+        }
+        @include media(pc) {
+          width: pc(40);
+          height: pc(22);
+          cursor: pointer;
+        }
+        > .l-header_colorCircle {
+          background-color: $black_01;
+          display: block;
+          border-radius: 100%;
+          @include media(sp) {
+          }
+          @include media(pc) {
+            width: pc(16);
+            height: pc(16);
+            margin-left: pc(1);
+          }
+        }
+      }
+      > .l-header_search {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include media(sp) {
+        }
+        @include media(pc) {
+          width: pc(22);
+          height: pc(22);
+          cursor: pointer;
+        }
+        > .l-header_serachIcon {
+          width: 100%;
+          height: 100%;
+          g {
+            > .l-hader_icon {
+              fill: none;
+              stroke: $black_01;
+              stroke-width: 20;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-miterlimit: 10;
+            }
+          }
+        }
+      }
+      > .l-header_language {
+        display: flex;
+        @include media(sp) {
+        }
+        @include media(pc) {
+          gap: pc(6);
+        }
+      }
+    }
+    > .l-header_modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @include media(sp) {
+      }
+      @include media(pc) {
+        height: 100vh;
+      }
+    }
+  }
+}

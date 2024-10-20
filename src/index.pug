@@ -1,0 +1,14 @@
+- var PAGE_TYPE = "top";
+- var TITLE = "映画検索サイト";
+include ./html/include/config/_config
+include ./html/include/compornent/_include
+
+doctype html
+html(lang="ja")
+  include ./html/include/config/_head
+  body.p-top
+    include ./html/include/layout/_header
+    .p-top_area
+      .p-top_movie
+        ul.p-top_movieList(data-movie-list)
+    include ./html/include/layout/_footer
