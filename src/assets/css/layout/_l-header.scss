@@ -21,6 +21,7 @@
       height: pc(84);
     }
     > .l-header_logo {
+      color: var(--secondary-color);
       @include media(sp) {
       }
       @include media(pc) {
@@ -37,12 +38,12 @@
         gap: pc(16);
       }
       > .l-header_colorMode {
-        border: 1px solid $gray_02;
-        border-radius: calc(infinity * 1px);
-        background-color: $white_01;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        border: 1px solid $gray_02;
+        border-radius: calc(infinity * 1px);
+        background-color: var(--primary-color);
         @include media(sp) {
         }
         @include media(pc) {
@@ -51,15 +52,16 @@
           cursor: pointer;
         }
         > .l-header_colorCircle {
-          background-color: $black_01;
           display: block;
           border-radius: 100%;
+          background-color: var(--secondary-color);
           @include media(sp) {
           }
           @include media(pc) {
             width: pc(16);
             height: pc(16);
-            margin-left: pc(1);
+            // margin-left: pc(2);
+            transform: translateX(pc(2.5));
           }
         }
       }
@@ -79,10 +81,10 @@
           height: 100%;
           g {
             > .l-hader_icon {
-              fill: none;
-              stroke: $black_01;
               stroke-width: 20;
               stroke-linecap: round;
+              stroke: var(--secondary-color);
+              fill: none;
               stroke-linejoin: round;
               stroke-miterlimit: 10;
             }
@@ -90,10 +92,12 @@
         }
       }
       > .l-header_language {
+        color: var(--secondary-color);
         display: flex;
         @include media(sp) {
         }
         @include media(pc) {
+          font-size: pc(16);
           gap: pc(6);
         }
       }

@@ -1,0 +1,29 @@
+@use "../../foundation/variable/color" as *;
+@use "../../foundation/variable/font" as *;
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "sass:math";
+
+.c-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: calc(infinity * 1px);
+  background-color: var(--secondary-color);
+  @include media(sp) {
+  }
+  @include media(pc) {
+    width: pc(320);
+    height: pc(60);
+    cursor: pointer;
+  }
+  > .c-button_text {
+    color: var(--primary-color);
+    @include media(sp) {
+    }
+    @include media(pc) {
+    }
+  }
+}

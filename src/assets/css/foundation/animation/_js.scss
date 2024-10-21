@@ -3,6 +3,40 @@
 @use '../variable/color' as *;
 @use '../variable/font' as *;
 
+
+
+
 [data-header-modal] {
   pointer-events: none;
+}
+
+[data-movie-modal] {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-fix='fix'] {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+[data-header-color='light'] {
+  .l-header_colorCircle {
+    transition: 0.5s;
+    transition-property: transform;
+  }
+}
+
+[data-header-color='dark'] {
+  .l-header_colorCircle {
+    transition: 0.5s;
+    transition-property: transform;
+    @include media(sp) {
+    }
+    @include media(pc) {
+      transform: translateX(pc(20)) !important;
+    }
+  }
 }

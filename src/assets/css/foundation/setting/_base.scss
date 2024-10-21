@@ -5,7 +5,8 @@
 @use 'sass:math';
 
 body {
-  background-color: $gray_01;
+  overflow-y: scroll;
+  background-color: var(--primary-color);
 }
 
 .pc-only {

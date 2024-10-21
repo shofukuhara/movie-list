@@ -21,6 +21,7 @@
     "scss/operator-no-unspaced": null,
     "no-descending-specificity": null,
     "order/properties-alphabetical-order": true,
+    "block-no-empty": null,
     "order/order": [
       "custom-properties",
       "dollar-variables",
