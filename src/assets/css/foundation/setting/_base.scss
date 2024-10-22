@@ -1,12 +1,14 @@
-@use '../setting/function' as *;
-@use '../setting/mixin' as *;
-@use '../variable/color' as *;
-@use '../variable/font' as *;
-@use 'sass:math';
+@use "../setting/function" as *;
+@use "../setting/mixin" as *;
+@use "../variable/color" as *;
+@use "../variable/font" as *;
+@use "sass:math";
 
 body {
   overflow-y: scroll;
   background-color: var(--primary-color);
+  font-family: "Zilla Slab", serif;
+  @include en-font-w4;
 }
 
 .pc-only {

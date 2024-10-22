@@ -1,8 +1,8 @@
-@use '../foundation/variable/color' as *;
-@use '../foundation/variable/font' as *;
-@use '../foundation/setting/function' as *;
-@use '../foundation/setting/mixin' as *;
-@use 'sass:math';
+@use "../foundation/variable/color" as *;
+@use "../foundation/variable/font" as *;
+@use "../foundation/setting/function" as *;
+@use "../foundation/setting/mixin" as *;
+@use "sass:math";
 
 .l-header {
   position: sticky;
@@ -92,8 +92,8 @@
         }
       }
       > .l-header_language {
-        color: var(--secondary-color);
         display: flex;
+        color: var(--secondary-color);
         @include media(sp) {
         }
         @include media(pc) {
