@@ -1,6 +1,6 @@
 import { _updateViewportSize } from './modules/_viewport';
-import { _fetch } from './modules/_movie';
 import { _colorMode } from './modules/_color';
+import { _fetch } from './modules/_movie';
 
 window.addEventListener('DOMContentLoaded', () => {
   _updateViewportSize();

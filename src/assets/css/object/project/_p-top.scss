@@ -14,10 +14,15 @@
     .p-top_movie {
       .p-top_movieList {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
         margin-right: auto;
         margin-left: auto;
+        @include media(sp) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: sp(10);
+          width: sp(340);
+        }
         @include media(pc) {
+          grid-template-columns: repeat(4, 1fr);
           gap: pc(26.66);
           width: pc(1280);
         }
@@ -26,6 +31,7 @@
           border-radius: 8px;
           aspect-ratio: 2 / 3;
           @include media(sp) {
+            width: sp(165);
           }
           @include media(pc) {
             width: pc(300);
@@ -35,6 +41,8 @@
       }
       .p-top_buttonArea {
         @include media(sp) {
+          margin-top: sp(40);
+          margin-bottom: sp(40);
         }
         @include media(pc) {
           margin-top: pc(80);

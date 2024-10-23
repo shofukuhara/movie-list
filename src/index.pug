@@ -8,11 +8,11 @@ html(lang="ja")
   include ./html/include/config/_head
   body.p-top(data-fix data-color-mode="light")
     include ./html/include/layout/_header
-    .p-top_area
+    main.p-top_area
       .p-top_movie
         ul.p-top_movieList(data-movie-list)
         .p-top_buttonArea
-          .c-button(date-movie-button)
+          .c-button(data-movie-button)
             span.c-button_text
               | MORE
     include ./html/include/layout/_footer

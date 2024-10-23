@@ -13,6 +13,8 @@
   border-radius: calc(infinity * 1px);
   background-color: var(--secondary-color);
   @include media(sp) {
+    width: sp(240);
+    height: sp(44);
   }
   @include media(pc) {
     width: pc(320);
@@ -22,6 +24,7 @@
   > .c-button_text {
     color: var(--primary-color);
     @include media(sp) {
+      font-size: sp(18);
     }
     @include media(pc) {
       font-size: pc(24);

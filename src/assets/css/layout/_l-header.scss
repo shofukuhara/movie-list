@@ -1,8 +1,8 @@
-@use "../foundation/variable/color" as *;
-@use "../foundation/variable/font" as *;
-@use "../foundation/setting/function" as *;
-@use "../foundation/setting/mixin" as *;
-@use "sass:math";
+@use '../foundation/variable/color' as *;
+@use '../foundation/variable/font' as *;
+@use '../foundation/setting/function' as *;
+@use '../foundation/setting/mixin' as *;
+@use 'sass:math';
 
 .l-header {
   position: sticky;
@@ -15,6 +15,8 @@
     margin-right: auto;
     margin-left: auto;
     @include media(sp) {
+      width: sp(340);
+      height: sp(60);
     }
     @include media(pc) {
       width: pc(1280);
@@ -23,6 +25,7 @@
     > .l-header_logo {
       color: var(--secondary-color);
       @include media(sp) {
+        font-size: sp(20);
       }
       @include media(pc) {
         font-size: pc(32);
@@ -45,6 +48,8 @@
         border-radius: calc(infinity * 1px);
         background-color: var(--primary-color);
         @include media(sp) {
+          width: sp(40);
+          height: sp(22);
         }
         @include media(pc) {
           width: pc(40);
@@ -56,6 +61,10 @@
           border-radius: 100%;
           background-color: var(--secondary-color);
           @include media(sp) {
+            width: sp(16);
+            height: sp(16);
+            // margin-left: pc(2);
+            transform: translateX(sp(2.5));
           }
           @include media(pc) {
             width: pc(16);

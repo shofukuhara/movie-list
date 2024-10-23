@@ -3,17 +3,13 @@ import { API_KEY } from './_config';
 
 export const _fetch = () => {
   const BASE_URL = 'https://api.themoviedb.org/3';
-  const languages = {
-    ja: 'ja',
-    en: 'en',
-  };
-  let selectedLanguage = languages.ja;
   const moviesList = document.querySelector('[data-movie-list]');
-  const movieButton = document.querySelector('[date-movie-button]');
+  const movieButton = document.querySelector('[data-movie-button]');
   let currentPage = 1;
 
   const _fetchMovie = (page = 1) => {
-    const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=27&language=${selectedLanguage}&page=${page}`;
+    const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&with_genres=27&language=ja&page=${page}`;
+    console.log(url);
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -25,7 +21,7 @@ export const _fetch = () => {
   };
 
   const _movieItems = (movies) => {
-    moviesList.innerHTML = '';
+    // moviesList.innerHTML = '';
 
     // まずはリスト要素を作成して追加
     movies.forEach((movie) => {
@@ -40,13 +36,13 @@ export const _fetch = () => {
     });
 
     // すべての映画アイテムに対してアニメーションを適用
-    gsap.set(moviesList.children, { autoAlpha: 0 });
-    gsap.to(moviesList.children, {
-      autoAlpha: 1,
-      duration: 0.8,
-      ease: 'power1.out',
-      stagger: 0.1,
-    });
+    // gsap.set(moviesList.children, { autoAlpha: 0 });
+    // gsap.to(moviesList.children, {
+    //   autoAlpha: 1,
+    //   duration: 0.8,
+    //   ease: 'power1.out',
+    //   stagger: 0.1,
+    // });
   };
 
   _fetchMovie();
