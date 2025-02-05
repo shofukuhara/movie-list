@@ -1,8 +1,8 @@
-@use '../../foundation/variable/color' as *;
-@use '../../foundation/variable/font' as *;
-@use '../../foundation/setting/function' as *;
-@use '../../foundation/setting/mixin' as *;
-@use 'sass:math';
+@use "../../foundation/variable/color" as *;
+@use "../../foundation/variable/font" as *;
+@use "../../foundation/setting/function" as *;
+@use "../../foundation/setting/mixin" as *;
+@use "sass:math";
 
 .p-top {
   .p-top_area {
@@ -17,13 +17,13 @@
         margin-right: auto;
         margin-left: auto;
         @include media(sp) {
-          grid-template-columns: repeat(2, 1fr);
           gap: sp(10);
+          grid-template-columns: repeat(2, 1fr);
           width: sp(340);
         }
         @include media(pc) {
-          grid-template-columns: repeat(4, 1fr);
           gap: pc(26.66);
+          grid-template-columns: repeat(4, 1fr);
           width: pc(1280);
         }
         .p-top_movieItem {

@@ -1,7 +1,7 @@
-@use '../setting/function' as *;
-@use '../setting/mixin' as *;
-@use '../variable/color' as *;
-@use '../variable/font' as *;
+@use "../setting/function" as *;
+@use "../setting/mixin" as *;
+@use "../variable/color" as *;
+@use "../variable/font" as *;
 
 [data-header-modal] {
   pointer-events: none;
@@ -13,20 +13,20 @@
   pointer-events: none;
 }
 
-[data-fix='fix'] {
+[data-fix="fix"] {
   position: fixed;
   width: 100%;
   height: 100vh;
 }
 
-[data-header-color='light'] {
+[data-header-color="light"] {
   .l-header_colorCircle {
     transition: 0.3s;
     transition-property: transform;
   }
 }
 
-[data-header-color='dark'] {
+[data-header-color="dark"] {
   .l-header_colorCircle {
     transition: 0.3s;
     transition-property: transform;

@@ -1,8 +1,8 @@
-@use '../foundation/variable/color' as *;
-@use '../foundation/variable/font' as *;
-@use '../foundation/setting/function' as *;
-@use '../foundation/setting/mixin' as *;
-@use 'sass:math';
+@use "../foundation/variable/color" as *;
+@use "../foundation/variable/font" as *;
+@use "../foundation/setting/function" as *;
+@use "../foundation/setting/mixin" as *;
+@use "sass:math";
 
 .l-header {
   position: sticky;
