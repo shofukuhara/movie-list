@@ -1,8 +1,8 @@
-// compornent
-@use "../object/compornent/c-button";
+// // components
+// @forward './components/index';
 
-// element
-@use "../object/element/e-element";
+// // elements
+// @forward './object/elements/index';
 
-// project
-@use "../object/project/p-top";
+// pages
+@forward "./pages/index";

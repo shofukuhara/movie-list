@@ -1,0 +1,17 @@
+---
+import "../assets/css/index.scss";
+import Meta from "../config/Meta.astro";
+const { pageData } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <Meta pageMeta={Astro.props.pageMeta} />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body data-page={pageData} data-fix data-color-mode="light" class="p-top">
+    <slot />
+    <script src="../assets/js/index.js"></script>
+  </body>
+</html>

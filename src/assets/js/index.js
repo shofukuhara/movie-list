@@ -1,9 +1,25 @@
-import { _updateViewportSize } from './modules/_viewport';
-import { _colorMode } from './modules/_color';
-import { _fetch } from './modules/_movie';
+import { UpdateViewportSize } from "./utils/viewport-utils";
 
-window.addEventListener('DOMContentLoaded', () => {
-  _updateViewportSize();
-  _fetch();
-  _colorMode();
-});
+const page = document.querySelector("[data-page]");
+const pageAttribute = page.getAttribute("data-page");
+
+// ================
+// 共通
+// ================
+const commonModules = {
+  viewport: new UpdateViewportSize(),
+};
+
+Object.values(commonModules).forEach((module) => module.init());
+
+// ================
+// 各ページ
+// ================
+const pageModules = {
+  home: UpdateViewportSize,
+};
+
+if (pageAttribute in pageModules) {
+  const instance = new pageModules[pageAttribute]();
+  instance.init();
+}

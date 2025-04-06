@@ -1,31 +1,13 @@
-@use "../setting/function" as *;
-@use "../setting/mixin" as *;
-@use "../variable/color" as *;
-@use "../variable/font" as *;
-@use "sass:math";
+@use "../global/index.scss" as *;
 
-body {
-  overflow-y: scroll;
-  background-color: var(--primary-color);
-  font-family: "Zilla Slab", serif;
-  @include en-font-w4;
+:root {
+  --vw: 100vw;
+  --vh: 100vh;
 }
 
-html[lang="ja"] {
-  .l-header_jp {
-    position: relative;
-    pointer-events: none;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      margin: auto;
-      background-color: var(--secondary-color);
-    }
-  }
+body {
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
 }
 
 .pc-only {
